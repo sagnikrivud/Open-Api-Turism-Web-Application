@@ -24,6 +24,12 @@ $ crontab -e
 
 > 0 2 * * * /path/to/your/script/Deploy.sh
 
+> Setup Database
+```sh
+$ php spark migrate
+```
+
+
 
 ## Important Change with index.php
 
