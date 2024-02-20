@@ -70,7 +70,7 @@ framework are exposed.
 
 
 
-- json (enabled by default - don't turn it off)
+- [json]() (enabled by default - don't turn it off)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
 
