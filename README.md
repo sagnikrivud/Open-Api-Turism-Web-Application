@@ -4,7 +4,7 @@
 
 ## Installation & updates
 ```sh
-$ git clone gh repo clone sagnikcapital/Open-Api-Travel-Application
+$ git clone https://github.com/sagnikcapital/Open-Api-Travel-Application.git
 ```
 ```sh
 $ cp .env.example .env
