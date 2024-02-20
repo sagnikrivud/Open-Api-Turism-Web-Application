@@ -12,6 +12,9 @@ $ cp .env.example .env
 ```sh
 $ composer install
 ```
+```sh
+$ chmod +x Permission.sh
+```
 
 
 ## Important Change with index.php
