@@ -39,4 +39,24 @@ class AuthController extends BaseController
     {
         return $this->response->setJSON(['message' => 'logged in', 'status' => 200]);
     }
+
+    /**
+     * Send OTP to End user for validate Phone
+     *
+     * @return void
+     */
+    public function sendOtp()
+    {
+        return $this->response->setJSON(['message' => 'OTP send successfully', 'status' => 200]);
+    }
+
+    /**
+     * Validate OTP
+     *
+     * @return void
+     */
+    public function validateOtp()
+    {
+
+    }
 }
