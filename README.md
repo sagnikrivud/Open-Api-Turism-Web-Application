@@ -1,4 +1,4 @@
-# OPEN API For Travel Agency application in [CodeIgniter]()![Logo](https://logowik.com/content/uploads/images/651_codeigniter.jpg)
+# OPEN API For Travel Agency application in [CodeIgniter]()![Logo](https://logowik.com/content/uploads/images/651_codeigniter.jpg){ width=50% height=50% }
 
 
 # Grow your tourism
