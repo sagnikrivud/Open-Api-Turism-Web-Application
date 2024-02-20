@@ -12,3 +12,5 @@ $routes->get('/', 'Home::index');
 $routes->get('/api/', function(){
   return array('status' => true, 'message'=> 'Welcome to the API!');
 });
+
+$routes->get('logs', "LogViewerController::index");

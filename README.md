@@ -47,7 +47,8 @@ TWILIO_SID=''
 TWILIO_AUTH_TOKEN=''
 ```
 
-
+## Check System Logs
+> Open http://your-domain/logs in browser
 ## Important Change with index.php
 
 `index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
