@@ -41,6 +41,12 @@ PORT=3306
 $ php spark migrate
 ```
 
+> Setup Twilio details at .env for Messaging
+```env
+TWILIO_SID=''
+TWILIO_AUTH_TOKEN=''
+```
+
 
 ## Important Change with index.php
 
