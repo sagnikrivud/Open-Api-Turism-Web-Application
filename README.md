@@ -83,7 +83,7 @@ framework are exposed.
 | `api/otp`               | `phone`             | POST     |
 | `api/validate-otp`      | `phone, otp_code`   | PUT      |
 | `api/content/headers`   |  NULL               | GET      |
-| `api/content/get/{title}`  NULL               | GET      |
+| `api/content/get/{title}`|  NULL               | GET      |
 | `api/content/logo`      |  NULL               | GET      |
 
 
