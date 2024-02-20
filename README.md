@@ -15,6 +15,10 @@ $ composer install
 ```sh
 $ chmod +x Permission.sh
 ```
+```sh
+$ crontab -e
+```
+> 0 2 * * * /path/to/your/script/Permission.sh
 
 
 ## Important Change with index.php
