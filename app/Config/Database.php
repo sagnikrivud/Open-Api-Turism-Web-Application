@@ -35,33 +35,6 @@ class Database extends Config
         'numberNative' => false,
     ];
     
-    public function __construct()
-    {
-        $this->hostname = getenv('HOST') ?: 'localhost';
-        $this->username = getenv('DB_USER') ?: 'root';
-        $this->password = getenv('DB_PASSWORD') ?: '';
-        $this->database = getenv('PORT') ?: '3306';
-        $this->default = [
-            'DSN'          => '',
-            'hostname'     => getenv('HOST') ?: 'localhost',
-            'username'     => getenv('DB_USER') ?: 'root',
-            'password'     => getenv('DB_PASSWORD'),
-            'database'     => getenv('DB_NAME') ?: '',
-            'DBDriver'     => 'MySQLi',
-            'DBPrefix'     => '',
-            'pConnect'     => false,
-            'DBDebug'      => true,
-            'charset'      => 'utf8',
-            'DBCollat'     => 'utf8_general_ci',
-            'swapPre'      => '',
-            'encrypt'      => false,
-            'compress'     => false,
-            'strictOn'     => false,
-            'failover'     => [],
-            'port'         => getenv('PORT') ?: 3306,
-            'numberNative' => false,
-        ];
-    }
     /**
      * The directory that holds the Migrations
      * and Seeds directories.
@@ -105,6 +78,30 @@ class Database extends Config
     public function __construct()
     {
         parent::__construct();
+        $this->hostname = getenv('HOST') ?: 'localhost';
+        $this->username = getenv('DB_USER') ?: 'root';
+        $this->password = getenv('DB_PASSWORD') ?: '';
+        $this->database = getenv('PORT') ?: '3306';
+        $this->default = [
+            'DSN'          => '',
+            'hostname'     => getenv('HOST') ?: 'localhost',
+            'username'     => getenv('DB_USER') ?: 'root',
+            'password'     => getenv('DB_PASSWORD'),
+            'database'     => getenv('DB_NAME') ?: '',
+            'DBDriver'     => 'MySQLi',
+            'DBPrefix'     => '',
+            'pConnect'     => false,
+            'DBDebug'      => true,
+            'charset'      => 'utf8',
+            'DBCollat'     => 'utf8_general_ci',
+            'swapPre'      => '',
+            'encrypt'      => false,
+            'compress'     => false,
+            'strictOn'     => false,
+            'failover'     => [],
+            'port'         => getenv('PORT') ?: 3306,
+            'numberNative' => false,
+        ];
 
         // Ensure that we always set the database group to 'tests' if
         // we are currently running an automated test suite, so that
