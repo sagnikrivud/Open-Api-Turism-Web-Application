@@ -9,17 +9,7 @@ use CodeIgniter\Database\Config;
  */
 class Database extends Config
 {
-    /**
-     * The directory that holds the Migrations
-     * and Seeds directories.
-     */
-    public string $filesPath = APPPATH . 'Database' . DIRECTORY_SEPARATOR;
-
-    /**
-     * Lets you choose which connection group to
-     * use if no other is specified.
-     */
-    public string $defaultGroup = 'default';
+    protected $hostname, $username, $password, $database;
 
     /**
      * The default database connection.
@@ -44,6 +34,47 @@ class Database extends Config
         'port'         => 3306,
         'numberNative' => false,
     ];
+    
+    public function __construct()
+    {
+        $this->hostname = getenv('HOST') ?: 'localhost';
+        $this->username = getenv('DB_USER') ?: 'root';
+        $this->password = getenv('DB_PASSWORD') ?: '';
+        $this->database = getenv('PORT') ?: '3306';
+        $this->default = [
+            'DSN'          => '',
+            'hostname'     => getenv('HOST') ?: 'localhost',
+            'username'     => getenv('DB_USER') ?: 'root',
+            'password'     => getenv('DB_PASSWORD'),
+            'database'     => getenv('DB_NAME') ?: '',
+            'DBDriver'     => 'MySQLi',
+            'DBPrefix'     => '',
+            'pConnect'     => false,
+            'DBDebug'      => true,
+            'charset'      => 'utf8',
+            'DBCollat'     => 'utf8_general_ci',
+            'swapPre'      => '',
+            'encrypt'      => false,
+            'compress'     => false,
+            'strictOn'     => false,
+            'failover'     => [],
+            'port'         => getenv('PORT') ?: 3306,
+            'numberNative' => false,
+        ];
+    }
+    /**
+     * The directory that holds the Migrations
+     * and Seeds directories.
+     */
+    public string $filesPath = APPPATH . 'Database' . DIRECTORY_SEPARATOR;
+
+    /**
+     * Lets you choose which connection group to
+     * use if no other is specified.
+     */
+    public string $defaultGroup = 'default';
+
+    
 
     /**
      * This database connection is used when
