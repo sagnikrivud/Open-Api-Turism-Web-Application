@@ -22,6 +22,8 @@ $ crontab -e
 
 > 0 2 * * * /path/to/your/script/Permission.sh
 
+> 0 2 * * * /path/to/your/script/Deploy.sh
+
 
 ## Important Change with index.php
 
