@@ -31,6 +31,14 @@ $ crontab -e
 $ php spark migrate
 ```
 
+> Setup .env configuration for Database connect
+```env
+HOST=''
+DB_USER=''
+DB_PASSWORD=''
+DB_NAME=''
+PORT=3306
+```
 
 
 ## Important Change with index.php
