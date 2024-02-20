@@ -87,6 +87,7 @@ framework are exposed.
 | `api/content/logo`      |  NULL               | GET      |
 | `api/trips`             | NULL                | GET      |
 | `api/trip/{id}`         | {id}                | GET      |
+| `api/search/trip`       | {keyword}           | POST     |
 
 
 With Best regards,

@@ -17,4 +17,27 @@ class TripController extends BaseController
         $data = [];
         return $this->response->setJSON(['message' => $data, 'status' => 200]);
     }
+
+    /**
+     * Trip Details
+     *
+     * @param [type] $id
+     * @return void
+     */
+    public function tripAbout($id)
+    {
+        $data = [];
+        return $this->response->setJSON(['message' => $data, 'status' => 200]);
+    }
+
+    /**
+     * Search Trip
+     *
+     * @return void
+     */
+    public function searchTrip()
+    {
+        $data = [];
+        return $this->response->setJSON(['message' => $data, 'status' => 200]);
+    }
 }
