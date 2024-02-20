@@ -1,4 +1,4 @@
-# OPEN API For Travel Agency application in CodeIgniter 
+# OPEN API For Travel Agency application in [CodeIgniter]() 
 
 <!-- ## What is CodeIgniter?
 
@@ -15,18 +15,16 @@ The user guide corresponding to the latest version of the framework can be found
 [here](https://codeigniter4.github.io/userguide/). -->
 
 ## Installation & updates
+```sh
+$ git clone gh repo clone sagnikcapital/Open-Api-Travel-Application
+```
+```sh
+$ cp .env.example .env
+```
+```sh
+$ composer install
+```
 
-<!-- `composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
-
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`. -->
-
-## Setup
-
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
 
 ## Important Change with index.php
 
@@ -54,16 +52,10 @@ Problems with it can be raised on our forum, or as issues in the main repository
 - [Apache 2]()
 - [CodeIgniter 4.0]()
 - [Mysql]()
-
 - [intl](http://php.net/manual/en/intl.requirements.php)
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)
 
-> **Warning**
-> The end of life date for PHP 7.4 was November 28, 2022. If you are
-> still using PHP 7.4, you should upgrade immediately. The end of life date
-> for PHP 8.0 will be November 26, 2023.
 
-Additionally, make sure that the following extensions are enabled in your PHP:
 
 - json (enabled by default - don't turn it off)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
