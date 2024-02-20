@@ -9,7 +9,7 @@ class AddMobileContactToUsers extends Migration
     public function up()
     {
         $this->forge->addColumn('users', [
-            'mobile_contact' => [
+            'phone' => [
                 'type' => 'VARCHAR',
                 'constraint' => '20',
                 'null' => true,

@@ -75,5 +75,17 @@ framework are exposed.
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
 
 
+## API  Documentation
+| API URL                 | Parameters          | Method   |
+|-------------------------|---------------------|----------|
+| `api/login`             | `phone, otp_code`   | POST     |
+| `api/register`          | `phone, email`      | POST     |
+| `api/otp`               | `phone`             | POST     |
+| `api/validate-otp`      | `phone, otp_code`   | PUT      |
+| `api/content/headers`   |  NULL               | GET      |
+| `api/content/get/{title}`  NULL               | GET      |
+| `api/content/logo`      |  NULL               | GET      |
+
+
 With Best regards,
  ### Sagnik Dey
