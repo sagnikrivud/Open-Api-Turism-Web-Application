@@ -55,4 +55,6 @@ framework are exposed.
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
 
-- ### Sagnik Dey
+
+With Best regards,
+ ### Sagnik Dey
