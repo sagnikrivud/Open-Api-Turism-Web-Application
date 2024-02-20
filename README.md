@@ -2,7 +2,7 @@
 
 
 
-## Installation & updates
+## Installation & updates (Directly at Server)
 ```sh
 $ git clone https://github.com/sagnikcapital/Open-Api-Travel-Application.git
 ```
