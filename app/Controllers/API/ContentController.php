@@ -19,7 +19,7 @@ class ContentController extends BaseController
     {
         $this->content = $content;
     }
-    
+
     /**
      * Header options set to API
      *
@@ -31,7 +31,8 @@ class ContentController extends BaseController
             ['title' => 'about-us', 'possessive' => true],
             ['title' => 'contact',  'possessive' => true],
             ['title' => 'announcement', 'possessive' => true ],
-            ['title' => 'Travel blogs',    'possessive' => true]
+            ['title' => 'Travel blogs',    'possessive' => true],
+            ['title' => 'Privacy policy', 'possessive' => true]
         ];
         return $this->response->setJSON($data);
     }
@@ -58,14 +59,10 @@ class ContentController extends BaseController
      *
      * @return string
      */
-    public function applicationLogo()
+    public function applicationLogo(): string
     {
         $data['logo_url'] = base_url('logo/logo.png');
         return $this->response->setJSON($data);
     }
 
-    public function updateApplicationLogo()
-    {
-
-    }
 }
