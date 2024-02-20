@@ -4,9 +4,22 @@ namespace App\Controllers\API;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
+use App\Services\ContentService;
 
 class ContentController extends BaseController
 {
+    protected $content;
+
+    /**
+     * Initialize Content
+     *
+     * @param ContentService $content
+     */
+    public function __construct(ContentService $content)
+    {
+        $this->content = $content;
+    }
+    
     /**
      * Header options set to API
      *
@@ -49,5 +62,10 @@ class ContentController extends BaseController
     {
         $data['logo_url'] = base_url('logo/logo.png');
         return $this->response->setJSON($data);
+    }
+
+    public function updateApplicationLogo()
+    {
+
     }
 }
