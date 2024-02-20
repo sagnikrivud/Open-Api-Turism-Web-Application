@@ -18,6 +18,7 @@ $ chmod +x Permission.sh
 ```sh
 $ crontab -e
 ```
+> Write the execution details at cron tab
 > 0 2 * * * /path/to/your/script/Permission.sh
 
 
