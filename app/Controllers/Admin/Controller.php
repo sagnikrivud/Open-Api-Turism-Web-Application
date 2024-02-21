@@ -8,13 +8,24 @@ use CodeIgniter\HTTP\ResponseInterface;
 class Controller extends BaseController
 {
     /**
+     * Admin login
+     */
+    public function adminLogin()
+    {
+        if ($this->request->getMethod() === 'post'){
+         return redirect()->to('admin/dashboard');
+        }
+         return view('admin/login');
+    }
+
+    /**
      * Admin dashboard
      *
      * @return string
      */
     public function index(): string
     {
-        return view('dashboard');
+        return view('admin/dashboard');
     }
 
 
@@ -68,5 +79,20 @@ class Controller extends BaseController
     public function updateTitleContent($title)
     {
 
+    }
+
+    /**
+     * Admin logout attempt
+     *
+     * @return void
+     */
+    public function adminLogout()
+    {
+        return redirect()->to('admin/login');
+    }
+
+    public function adminForgotPassword()
+    {
+        return view('admin/forgot-password');
     }
 }
