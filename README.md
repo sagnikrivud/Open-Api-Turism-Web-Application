@@ -110,6 +110,7 @@ framework are exposed.
 | `api/trip/{id}`         | `id`                | GET      |
 | `api/search/trip`       | `keyword`           | POST     |
 | `api/trip/review`       | `trip_id, user_id, review{int}, comment{text}`  | POST |
+| `api/trip/my-trips`     | `user_id`           | GET      |
 
 With Best regards,
  ### Sagnik Dey
