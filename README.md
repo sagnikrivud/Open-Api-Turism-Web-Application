@@ -85,6 +85,7 @@ framework are exposed.
 > Password : password1234
 
 > URL: /admin/login
+![Alt Text](blobs/login.png)
 
 ## API  Documentation
 | API URL                 | Parameters          | Method   |
