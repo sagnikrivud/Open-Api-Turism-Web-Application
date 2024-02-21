@@ -53,6 +53,11 @@ TWILIO_SID=''
 TWILIO_AUTH_TOKEN=''
 ```
 
+> Set the App Url at .env with domain like this
+```env
+APP_URL='http://domain.com/api/'
+```
+
 ## Check System Logs
 > Open http://your-domain/logs in browser
 - (Refer) https://github.com/SeunMatt/codeigniter-log-viewer 
