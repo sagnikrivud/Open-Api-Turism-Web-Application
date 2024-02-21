@@ -80,6 +80,10 @@ framework are exposed.
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
 
+## Admin Access
+> Username : admin@admin.com  
+> Password : password1234
+> URL: /admin/login
 
 ## API  Documentation
 | API URL                 | Parameters          | Method   |
@@ -89,11 +93,11 @@ framework are exposed.
 | `api/otp`               | `phone`             | POST     |
 | `api/validate-otp`      | `phone, otp_code`   | PUT      |
 | `api/content/headers`   |  NULL               | GET      |
-| `api/content/get/{title}`| {title}           | GET      |
+| `api/content/get/{title}`| `title`            | GET      |
 | `api/content/logo`      |  NULL               | GET      |
 | `api/trips`             | NULL                | GET      |
-| `api/trip/{id}`         | {id}                | GET      |
-| `api/search/trip`       | {keyword}           | POST     |
+| `api/trip/{id}`         | `{id}`              | GET      |
+| `api/search/trip`       | `{keyword}`         | POST     |
 
 
 With Best regards,
