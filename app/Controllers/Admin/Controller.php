@@ -4,6 +4,7 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
+use App\Model\User;
 
 class Controller extends BaseController
 {
@@ -13,7 +14,13 @@ class Controller extends BaseController
     public function adminLogin()
     {
         if ($this->request->getMethod() === 'post'){
-         return redirect()->to('admin/dashboard');
+         $email = $this->request->getPost('email');
+         $password = $this->request->getPost('password');
+         $user = new user();
+         $adminUser = $user->where('email', $email)->first();
+         if ($adminUser && password_verify($password, $adminUser['password'])) {
+            return redirect()->to('admin/dashboard');
+         }
         }
          return view('admin/login');
     }
@@ -88,6 +95,7 @@ class Controller extends BaseController
      */
     public function adminLogout()
     {
+        session()->destroy();
         return redirect()->to('admin/login');
     }
 
