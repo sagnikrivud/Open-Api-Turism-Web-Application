@@ -109,7 +109,7 @@ framework are exposed.
 | `api/trips`             | NULL                | GET      |
 | `api/trip/{id}`         | `id`                | GET      |
 | `api/search/trip`       | `keyword`           | POST     |
-
+| `api/trip/review`       | `trip_id, user_id, review{int}, comment{text}`  | POST |
 
 With Best regards,
  ### Sagnik Dey
