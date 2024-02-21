@@ -83,7 +83,6 @@ framework are exposed.
 ## Admin Access
 > Username : admin@admin.com  
 > Password : password1234
-
 > URL: /admin/login
 
 ## API  Documentation
