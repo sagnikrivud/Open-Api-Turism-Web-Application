@@ -96,8 +96,8 @@ framework are exposed.
 | `api/content/get/{title}`| `title`            | GET      |
 | `api/content/logo`      |  NULL               | GET      |
 | `api/trips`             | NULL                | GET      |
-| `api/trip/{id}`         | `{id}`              | GET      |
-| `api/search/trip`       | `{keyword}`         | POST     |
+| `api/trip/{id}`         | `id`                | GET      |
+| `api/search/trip`       | `keyword`           | POST     |
 
 
 With Best regards,
