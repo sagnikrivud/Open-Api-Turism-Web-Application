@@ -46,6 +46,10 @@ PORT=3306
 ```sh
 $ php spark migrate
 ```
+> Seed the Admin details to Database
+```sh
+$ php spark db:seed AdminSeeder
+```
 
 > Setup Twilio details at .env for Messaging
 ```env
