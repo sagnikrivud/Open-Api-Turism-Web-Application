@@ -16,4 +16,24 @@ class BookingController extends BaseController
     {
         //
     }
+
+    /**
+     * Confirm and submit Trip details
+     *
+     * @return void
+     */
+    public function confirmTrip()
+    {
+        //
+    }
+
+    /**
+     * Cancel trip API
+     *
+     * @return void
+     */
+    public function cancelTrip()
+    {
+        //
+    }
 }
