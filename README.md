@@ -111,6 +111,7 @@ framework are exposed.
 | `api/search/trip`       | `keyword`           | POST     |
 | `api/trip/review`       | `trip_id, user_id, review{int}, comment{text}`  | POST |
 | `api/trip/my-trips`     | `user_id`           | GET      |
+| `api/trip/confirm`      | `user_id, trip_id, date`| POST |
 | `api/trip/cancel`       | `trip_id, reason {text}`    | DELETE  |
 
 With Best regards,
