@@ -83,9 +83,9 @@
         <form action="<?= site_url('admin/login') ?>" method="post" autocomplete="off">
             <input type="hidden" name="login_attempt" value="1">
             <p>Email</p>
-            <input type="text" name="email" placeholder="Email">
+            <input type="text" required name="email" placeholder="Email">
             <p>Password</p>
-            <input type="password" name="password" placeholder="Password">
+            <input type="password" required name="password" placeholder="Password">
             <input type="submit" name="login-btn" value="Login">
             <a href="#">Forgot your password?</a>
         </form>
