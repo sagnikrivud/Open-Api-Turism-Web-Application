@@ -1,6 +1,12 @@
 # OPEN API For Travel Agency application in [CodeIgniter]()![Logo](https://logowik.com/content/uploads/images/651_codeigniter.jpg)
 
+Information Access:
 
+Destination Details: Tourism sites provide comprehensive information about various destinations, including attractions, accommodations, activities, and local culture. This helps travelers make informed decisions about where to go and what to do.
+Trip Planning:
+
+Itinerary Creation: 
+Users can plan their entire trip, from choosing destinations and activities to creating detailed itineraries. Tourism sites often offer tools to organize and customize travel plans.
 # Grow your tourism
 ![Tourism](https://i.pinimg.com/736x/2f/a2/32/2fa2321cb1703d6eef32410774156fed.jpg)
 
