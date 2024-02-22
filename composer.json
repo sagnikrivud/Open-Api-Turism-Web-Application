@@ -12,6 +12,7 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "codeigniter4/framework": "^4.0",
+        "razorpay/razorpay": "2.*",
         "seunmatt/codeigniter-log-viewer": "^2.0",
         "twilio/sdk": "^7.15"
     },

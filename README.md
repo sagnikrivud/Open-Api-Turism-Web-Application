@@ -69,6 +69,12 @@ SMTPPASS=''
 SMPTP_PORT=587
 SMTP_LEVEL='tls'
 ```
+> Configure Razorpay  Payment Gateway Details in .env file
+```env
+RAZORPAY_API_KEY=''
+RAZORPAY_API_SECRET=''
+RAZORPAY_CURRENCY='USD'
+```
 
 ## Check System Logs
 > Open http://your-domain/logs in browser
