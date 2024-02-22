@@ -75,6 +75,7 @@ RAZORPAY_API_KEY=''
 RAZORPAY_API_SECRET=''
 RAZORPAY_CURRENCY='USD'
 ```
+- Refer: https://github.com/razorpay/razorpay-php
 
 ## Check System Logs
 > Open http://your-domain/logs in browser
