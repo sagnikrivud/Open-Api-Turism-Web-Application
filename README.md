@@ -31,9 +31,12 @@ $ crontab -e
 ```
 > Write the execution details at cron tab: 
 
-> 0 2 * * * /path/to/your/script/Permission.sh
-
-> 0 2 * * * /path/to/your/script/Deploy.sh
+```sh
+0 2 * * * /path/to/your/script/Permission.sh
+```
+```sh
+0 2 * * * /path/to/your/script/Deploy.sh
+```
 
 
 > Setup .env configuration for Database connect
