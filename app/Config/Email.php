@@ -118,4 +118,26 @@ class Email extends BaseConfig
      * Enable notify message from server
      */
     public bool $DSN = false;
+
+
+    public function __construct()
+    {
+        $this->SMTPHost = env('SMTP_HOST', '');
+        $this->SMTPUser = env('SMTP_USER', '');
+        $this->SMTPPass = env('SMTP_PASS', '');
+        $this->SMTPPort = env('SMTP_PORT', 587);
+        $this->SMTPCrypto = env('SMTP_LEVEL', 'tls');
+    }
+
+    // public $config = [
+    //     'protocol'     => 'smtp',
+    //     'SMTPHost'     => env('SMTP_HOST', ''),//'your_smtp_host',
+    //     'SMTPUser'     => env('SMTP_USER', ''),//'your_smtp_username',
+    //     'SMTPPass'     => env('SMTP_PASS', ''),//'your_smtp_password',
+    //     'SMTPPort'     => env('SMTP_PORT', 587),//587,
+    //     'SMTPCrypto'   => env('SMTP_LEVEL', 'tls'),//'tls',
+    //     'mailType'     => 'html',
+    //     'charset'      => 'utf-8',
+    //     'newline'      => "\r\n",
+    // ];
 }
