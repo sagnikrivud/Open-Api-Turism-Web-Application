@@ -61,6 +61,14 @@ TWILIO_AUTH_TOKEN=''
 ```env
 APP_URL='http://domain.com/api/'
 ```
+> Configure the SMTP Details at .env for Mailing
+```env
+SMTP_HOST=''
+SMTPUSER=''
+SMTPPASS=''
+SMPTP_PORT=587
+SMTP_LEVEL='tls'
+```
 
 ## Check System Logs
 > Open http://your-domain/logs in browser
