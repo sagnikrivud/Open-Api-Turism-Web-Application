@@ -6,7 +6,6 @@ class Home extends BaseController
 {
     public function index(): object
     {
-        // return view('welcome_message');
         $data = [
             'message' => 'Welcome to CI page',
             'status' => true,
