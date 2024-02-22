@@ -14,7 +14,8 @@ class BookingController extends BaseController
      */
     public function myTrips()
     {
-        //
+        $data = [];
+        return $this->response->setJSON(['data' => $data, 'status' => 200]);
     }
 
     /**
@@ -24,7 +25,8 @@ class BookingController extends BaseController
      */
     public function confirmTrip()
     {
-        //
+        $data = [];
+        return $this->response->setJSON(['data' => $data, 'status' => 200]);
     }
 
     /**
@@ -34,6 +36,7 @@ class BookingController extends BaseController
      */
     public function cancelTrip()
     {
-        //
+        $data = [];
+        return $this->response->setJSON(['data' => $data, 'status' => 200]);
     }
 }

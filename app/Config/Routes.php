@@ -13,7 +13,7 @@ $routes->get('/api/', function(){
   return array('status' => true, 'message'=> 'Welcome to the API!');
 });
 
-$routes->get('logs', "LogViewerController::index");
+$routes->get('logs', "Log\LogViewerController::index");
 $routes->match(['get', 'post'],'admin/login', 'Admin\Controller::adminLogin');
 $routes->get('admin/dashboard', 'Admin\Controller::index');
 $routes->post('admin/logout', 'Admin\Controller::adminLogout');
