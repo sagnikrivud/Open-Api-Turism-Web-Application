@@ -82,6 +82,7 @@
         <h2>Login</h2>
         <form action="<?= site_url('admin/login') ?>" method="post" autocomplete="off">
             <input type="hidden" name="login_attempt" value="1">
+            <?= csrf_field() ?>
             <p>Email</p>
             <input type="text" required name="email" placeholder="Email">
             <p>Password</p>
