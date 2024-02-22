@@ -14,6 +14,7 @@
         "codeigniter4/framework": "^4.0",
         "razorpay/razorpay": "2.*",
         "seunmatt/codeigniter-log-viewer": "^2.0",
+        "smalot/pdfparser": "^2.8",
         "twilio/sdk": "^7.15"
     },
     "require-dev": {
