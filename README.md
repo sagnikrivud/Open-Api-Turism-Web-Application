@@ -24,6 +24,9 @@ $ composer install
 $ chmod +x Permission.sh
 ```
 ```sh
+$ chmod +x Deploy.sh
+```
+```sh
 $ crontab -e
 ```
 > Write the execution details at cron tab: 
