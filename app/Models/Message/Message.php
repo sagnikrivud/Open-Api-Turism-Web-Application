@@ -12,7 +12,9 @@ class Message extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+                                    'receiver', 'text_message', 'purposes'
+                                  ];
 
     protected bool $allowEmptyInserts = false;
 
