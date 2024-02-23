@@ -52,4 +52,9 @@ class Booking extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function bookings()
+    {
+      return $this->hasMany(BookingModel::class, 'user_id');
+    }
 }
