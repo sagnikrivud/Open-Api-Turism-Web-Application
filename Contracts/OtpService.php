@@ -18,6 +18,7 @@ class OtpService {
   {
     $this->model = $model;
     $this->user = $user;
+    helper(['Otp','Message']);
   }
 
   /**
@@ -41,5 +42,19 @@ class OtpService {
       return false;
     }
     return false;
+  }
+
+  public function  sendOtpSms($request)
+  {
+    $otpCode = generateOtpNumber();
+    smsNotification($request->phone, 'Use this Code '.$otpCode.' to verify your Mobile.');
+    $data = [
+      'otp'        => $otpCode,
+      'user_id'    => $request->user_id,
+      'purpose'    => 'phone verification',
+      'expired_at' => date('Y-m-d H:i:s', strtotime('+10 minutes')),
+      'created_at' => date('Y-m-d H:i:s'),
+    ];
+    $this->model->insert($data);
   }
 }
