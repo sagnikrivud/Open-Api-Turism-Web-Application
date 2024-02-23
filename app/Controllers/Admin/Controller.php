@@ -8,6 +8,11 @@ use App\Models\User;
 
 class Controller extends BaseController
 {
+    protected $user;
+    public function __construct(User $user)
+    {
+        $this->user = $user;
+    }
     /**
      * Admin login
      */
@@ -95,7 +100,12 @@ class Controller extends BaseController
      */
     public function getCustomerList()
     {
-
+        $users = $this->user->where('user_type', 3)->paginate(10);
+        $data = [
+            'users' => $users,
+            'pager' =>  $this->user->pager,
+        ];
+        return view('users', $data);
     }
 
     /**
