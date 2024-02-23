@@ -5,19 +5,22 @@ namespace App\Controllers\API;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Services\ContentService;
+use App\Models\Settings;
 
 class ContentController extends BaseController
 {
     protected $content;
 
+    protected $settings;
     /**
      * Initialize Content
      *
      * @param ContentService $content
      */
-    public function __construct(ContentService $content)
+    public function __construct(ContentService $content, Settings $settings)
     {
-        $this->content = $content;
+        $this->content  = $content;
+        $this->settings = $settings;
     }
 
     /**
@@ -61,7 +64,8 @@ class ContentController extends BaseController
      */
     public function applicationLogo(): string
     {
-        $data['logo_url'] = base_url('logo/logo.png');
+        $logo = $this->settings->getLogo();
+        $data['logo_url'] = base_url($logo);
         return $this->response->setJSON($data);
     }
 
