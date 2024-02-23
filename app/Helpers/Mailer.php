@@ -6,7 +6,7 @@ use Twilio\Rest\Client;
 function sendMailer($sendTo, $subject, $content) {
   $email = \Config\Services::email();
   $email->setTo($sendTo);
-  $email->setFrom('your_email@example.com', 'Your Name');
+  $email->setFrom(env('MAIL_FROM'), env('MAIL_NAME'));
   $email->setSubject($subject);
   $email->setMessage($content);
   if ($email->send()) {

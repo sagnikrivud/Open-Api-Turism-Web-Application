@@ -77,6 +77,8 @@ SMTPUSER=''
 SMTPPASS=''
 SMPTP_PORT=587
 SMTP_LEVEL='tls'
+MAIL_FROM=''
+MAIL_NAME='your name'
 ```
 > Configure Razorpay  Payment Gateway Details in .env file
 ```env
