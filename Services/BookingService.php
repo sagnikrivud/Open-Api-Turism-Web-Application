@@ -29,5 +29,25 @@ class BookingService {
     return $this->auth->user()->bookings();
   }
 
-  public function 
+  /**
+   * Confirm a trip after payment
+   *
+   * @param [type] $request
+   * @return void
+   */
+  public function confirmTrip($request)
+  {
+
+  }
+
+  /**
+   * Cancel the trip and refund
+   *
+   * @param [type] $request
+   * @return void
+   */
+  public function cancelTrip($request)
+  {
+
+  }
 }

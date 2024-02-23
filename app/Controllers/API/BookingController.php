@@ -4,9 +4,16 @@ namespace App\Controllers\API;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
+use App\Services\BookingService;
 
 class BookingController extends BaseController
 {
+    protected $booking;
+
+    public function __construct(BookingService $booking)
+    {
+        $this->booking = $booking;
+    }
     /**
      * Client Booking list
      *
@@ -14,7 +21,7 @@ class BookingController extends BaseController
      */
     public function myTrips()
     {
-        $data = [];
+        $data = $this->booking->myTrips();
         return $this->response->setJSON(['data' => $data, 'status' => 200]);
     }
 
@@ -25,7 +32,8 @@ class BookingController extends BaseController
      */
     public function confirmTrip()
     {
-        $data = [];
+        $request = $this->request->getPost();
+        $data = $this->booking->confirmTrip($request);
         return $this->response->setJSON(['data' => $data, 'status' => 200]);
     }
 
@@ -36,7 +44,8 @@ class BookingController extends BaseController
      */
     public function cancelTrip()
     {
-        $data = [];
+        $request = $this->request->getPost();
+        $data = $this->booking->cancelTrip($request);
         return $this->response->setJSON(['data' => $data, 'status' => 200]);
     }
 }
