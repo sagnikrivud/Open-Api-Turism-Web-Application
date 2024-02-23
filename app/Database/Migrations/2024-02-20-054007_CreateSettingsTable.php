@@ -34,6 +34,10 @@ class CreateSettingsTable extends Migration
             'under_maintenance' => [
                 'type' => 'BOOLEAN',
                 'default' => false
+            ],
+            'currency' => [
+                'type' => 'VARCHAR',
+                'constraint' => '255',
             ]
         ]);
         $this->forge->addKey('id', true);
@@ -42,6 +46,6 @@ class CreateSettingsTable extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('settings');
     }
 }

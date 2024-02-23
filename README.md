@@ -82,7 +82,7 @@ SMTP_LEVEL='tls'
 ```env
 RAZORPAY_API_KEY=''
 RAZORPAY_API_SECRET=''
-RAZORPAY_CURRENCY='USD'
+RAZORPAY_CURRENCY='USD' #'INR', 'IDR', 'EUR', 'EGP', 'GHS'
 ```
 - Refer: https://github.com/razorpay/razorpay-php
 
