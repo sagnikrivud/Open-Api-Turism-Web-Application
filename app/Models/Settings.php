@@ -19,4 +19,15 @@ class Settings extends Model
     {
         return $this->select('logo')->first();
     }
+
+    /**
+     * Update Logo
+     *
+     * @param [type] $logoPath
+     * @return void
+     */
+    public function updateLogo($logoPath)
+    {
+        return $this->update(['logo' => $logoPath]);
+    }
 }

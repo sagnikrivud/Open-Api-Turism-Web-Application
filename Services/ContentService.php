@@ -32,13 +32,13 @@ class ContentService implements ContentContract {
   public function updateApplicationLogo($fileRequest)
   {
     if ($fileRequest->isValid() && $fileRequest->hasFile('logo')) {
-      // Get file name with the extension
       $logoFile = $fileRequest->getFile('logo');
       $oldLogoPath = $this->model->getLogoPath();
       if ($oldLogoPath && is_file($oldLogoPath)) {
         unlink($oldLogoPath);
       }
       $logoFile->move('public/logo', $logoName);
+      $this->model->updateLogo('public/logo/' . $logoName);
       return true;
     }
       return false;
