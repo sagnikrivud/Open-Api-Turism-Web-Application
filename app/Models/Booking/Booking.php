@@ -1,18 +1,31 @@
 <?php
 
-namespace App\Models\Trip;
+namespace App\Models\Booking;
 
 use CodeIgniter\Model;
 
-class Payment extends Model
+class Booking extends Model
 {
-    protected $table            = 'payments';
+    protected $table            = 'bookings';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
+    protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+                                    'booking_number',
+                                    'user_id',
+                                    'model_type',
+                                    'trip_id',
+                                    'additional_details',
+                                    'starting_point',
+                                    'destination_point',
+                                    'persons',
+                                    'trip_amount',
+                                    'discount',
+                                    'total_amount',
+                                    'status'
+                                  ];
 
     protected bool $allowEmptyInserts = false;
 
