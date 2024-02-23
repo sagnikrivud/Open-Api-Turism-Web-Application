@@ -50,4 +50,14 @@ class BookingService {
   {
 
   }
+
+  /**
+   * Fetch Booking details
+   *
+   * @return void
+   */
+  public function bookingDetails($bookingNumber)
+  {
+
+  }
 }
