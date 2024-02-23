@@ -50,6 +50,10 @@ DB_PASSWORD=''
 DB_NAME=''
 PORT=3306
 ```
+> Set the Value of CI_ENVIRONMENT
+```env
+CI_ENVIRONMENT='production'
+```
 
 > Run migrations
 ```sh
