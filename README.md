@@ -40,6 +40,10 @@ $ crontab -e
 ```sh
 0 2 * * * /path/to/your/script/Deploy.sh
 ```
+> Write the .htaccess
+```sh
+$ cp public/.htaccess .
+```
 
 
 > Setup .env configuration for Database connect
