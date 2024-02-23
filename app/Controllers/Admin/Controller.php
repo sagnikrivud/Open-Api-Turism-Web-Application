@@ -119,6 +119,11 @@ class Controller extends BaseController
         return redirect()->to('admin/login');
     }
 
+    /**
+     * Admin forgot password attempt
+     *
+     * @return void
+     */
     public function adminForgotPassword()
     {
         return view('admin/forgot-password');
