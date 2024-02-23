@@ -3,6 +3,7 @@
 namespace App\Services;
 use App\Models\User;
 use App\Models\Booking;
+use App\Contracts\BookingContract;
 
 class BookingService {
   public $model;
@@ -15,6 +16,7 @@ class BookingService {
   public function __construct(Booking $model)
   {
     $this->model = $model;
+    $this->auth = service('authentication');
   }
 
   /**
@@ -24,6 +26,8 @@ class BookingService {
    */
   public function myTrips()
   {
-    return auth()->user()->bookings();
+    return $this->auth->user()->bookings();
   }
+
+  public function 
 }
