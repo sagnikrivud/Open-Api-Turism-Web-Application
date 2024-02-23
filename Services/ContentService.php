@@ -3,8 +3,9 @@
 namespace App\Services;
 use App\Models\Settings;
 use App\Models\Blog;
+use App\Contracts\ContentContract;
 
-class ContentService {
+class ContentService implements ContentContract {
 
   protected $settings;
 

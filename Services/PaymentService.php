@@ -3,8 +3,9 @@
 namespace App\Services;
 use Razorpay\Api\Api as RazorPayClient;
 use App\Models\Payment\Payment;
+use App\Contracts\PaymentContract;
 
-class PaymentService {
+class PaymentService implements PaymentContract {
   public $client;
 
   /**

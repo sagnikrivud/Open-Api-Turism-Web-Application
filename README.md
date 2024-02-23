@@ -10,6 +10,9 @@ Users can plan their entire trip, from choosing destinations and activities to c
 # Grow your tourism
 ![Tourism](https://i.pinimg.com/736x/2f/a2/32/2fa2321cb1703d6eef32410774156fed.jpg)
 
+## Payment Gateway
+![Razorpay](https://cdn.iconscout.com/icon/free/png-512/free-razorpay-1649771-1399875.png?f=webp&w=256)
+
 ## Installation & updates (Directly at Server)
 ```sh
 $ git clone https://github.com/sagnikcapital/Open-Api-Travel-Application.git
