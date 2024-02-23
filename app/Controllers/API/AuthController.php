@@ -5,9 +5,12 @@ namespace App\Controllers\API;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Services\AuthService;
+use CodeIgniter\API\ResponseTrait;
 
 class AuthController extends BaseController
 {
+    use ResponseTrait;
+
     protected $auth;
 
     /**
@@ -28,6 +31,21 @@ class AuthController extends BaseController
     public function userRegister()
     {
         return $this->response->setJSON(['message' => 'welcome', 'status' => 200]);
+    }
+
+    /**
+     * Access token Provider
+     *
+     * @return void
+     */
+    public function token()
+    {
+        $server = new OAuth2Server(
+            service('OAuth2\Repositories\ClientRepository'),
+            service('OAuth2\Repositories\UserRepository')
+        );
+
+        return $this->response->setJSON($server->respondToAccessTokenRequest($this->request, $this->response));
     }
 
     /**
