@@ -4,6 +4,7 @@ namespace App\Services;
 use App\Models\Settings;
 use App\Models\Blog;
 use App\Contracts\ContentContract;
+use App\Models\Content;
 
 class ContentService implements ContentContract {
 
@@ -13,10 +14,13 @@ class ContentService implements ContentContract {
 
   protected $blog;
 
-  public function __construct(Settings $settings, Blog $blog)
+  protected $content;
+
+  public function __construct(Settings $settings, Blog $blog, Content $content)
   {
     $this->model = $settings;
     $this->blog = $blog;
+    $this->content = $content;
   }
 
   /**
@@ -27,7 +31,17 @@ class ContentService implements ContentContract {
    */
   public function updateApplicationLogo($fileRequest)
   {
-
+    if ($fileRequest->isValid() && $fileRequest->hasFile('logo')) {
+      // Get file name with the extension
+      $logoFile = $fileRequest->getFile('logo');
+      $oldLogoPath = $this->model->getLogoPath();
+      if ($oldLogoPath && is_file($oldLogoPath)) {
+        unlink($oldLogoPath);
+      }
+      $logoFile->move('public/logo', $logoName);
+      return true;
+    }
+      return false;
   }
 
   /**
@@ -37,7 +51,9 @@ class ContentService implements ContentContract {
    */
   public function blogsList()
   {
-    return $this->blog->paginate(10);
+    $data['blogs'] = $this->blog->paginate(10);
+    $data['pager'] = $this->blog->pager;
+    return $data;
   }
 
   /**
@@ -47,7 +63,7 @@ class ContentService implements ContentContract {
    */
   public function getContent($title)
   {
-
+    return $this->content->where('title', $title)->first();
   }
 }
 
