@@ -24,30 +24,39 @@ class Trips extends Migration
             ],
             'trip_content'    => [
                 'type'           => 'TEXT',
+                'constraint'     => 255,
             ],
             'days'            => [
                 'type'           => 'INT',
+                'null'           => true,
             ],
             'nights'          => [
                 'type'           => 'INT',
+                'null'           => true,
             ],
             'start_date'      => [
                 'type'           => 'DATE',
+                'null'           => true,
             ],
             'end_date'        => [
                 'type'           => 'DATE',
+                'null'           => true,
             ],
             'start_latitude'  => [
                 'type'           => 'VARCHAR',
+                'constraint'     => 255,
             ],
             'start_longitude' => [
                 'type'           => 'VARCHAR',
+                'constraint'     => 255,
             ],
             'end_latitude'    => [
                 'type'           => 'VARCHAR',
+                'constraint'     => 255,
             ],
             'end_longitude'   => [
                 'type'           => 'VARCHAR',
+                'constraint'     => 255,
             ],
             'price_per_person' => [
                 'type'           => 'DECIMAL',
