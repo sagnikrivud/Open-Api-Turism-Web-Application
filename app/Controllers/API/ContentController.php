@@ -46,10 +46,10 @@ class ContentController extends BaseController
     public function getContent($title) :object
     {
         if($title == 'Travel blogs'){
-            $blogs = [];
+            $blogs = $this->content->blogsList();
             return $this->response->setJSON(['data' => $blogs, 'status' => 200]);
         }else{
-            $data = [];
+            $data = $this->content->getContent($title);
             return $this->response->setJSON(['data' => $data, 'status' => 200]);
         }
     }

@@ -17,4 +17,12 @@ interface ContentContract {
    * @return void
    */
   public function blogsList();
+
+  /**
+   * Get Content Details
+   *
+   * @param [type] $title
+   * @return void
+   */
+  public function getContent($title);
 }

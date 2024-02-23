@@ -37,7 +37,17 @@ class ContentService implements ContentContract {
    */
   public function blogsList()
   {
-    
+    return $this->blog->paginate(10);
+  }
+
+  /**
+   * Get Content details
+   *
+   * @return void
+   */
+  public function getContent($title)
+  {
+
   }
 }
 
