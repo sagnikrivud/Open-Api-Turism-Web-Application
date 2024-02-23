@@ -24,7 +24,8 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'admin' => \App\Middleware\AdminCheck::class
+        'admin' => \App\Middleware\AdminCheck::class,
+        'cors'          => \Agungsugiarto\Boilerplate\Middlewares\CorsMiddleware::class,
     ];
 
     /**
