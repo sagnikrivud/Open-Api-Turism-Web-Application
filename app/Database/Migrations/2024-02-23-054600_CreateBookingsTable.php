@@ -49,6 +49,11 @@ class CreateBookingsTable extends Migration
                 'type' => 'INT',
                 'constraint' => 5,
             ],
+            'trip_type' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'null' => true,
+            ],
             'trip_amount' => [
                 'type' => 'DECIMAL',
                 'constraint' => '10,2',
