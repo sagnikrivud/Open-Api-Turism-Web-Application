@@ -58,6 +58,6 @@ class BookingService {
    */
   public function bookingDetails($bookingNumber)
   {
-
+    return $this->model->where('booking_number', $bookingNumber)->first();
   }
 }
