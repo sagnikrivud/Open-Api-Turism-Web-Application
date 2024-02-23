@@ -89,6 +89,16 @@ class Controller extends BaseController
     }
 
     /**
+     * Customer list for Admin panel
+     *
+     * @return void
+     */
+    public function getCustomerList()
+    {
+
+    }
+
+    /**
      * Admin logout attempt
      *
      * @return void
