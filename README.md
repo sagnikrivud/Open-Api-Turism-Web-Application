@@ -7,6 +7,12 @@ Trip Planning:
 
 Itinerary Creation: 
 Users can plan their entire trip, from choosing destinations and activities to creating detailed itineraries. Tourism sites often offer tools to organize and customize travel plans.
+
+Application features 
+- Ready to deploy at server and start business.
+- Logo and Banner can be set according to business.
+- Admin Panel for adding/editing trips, manage Customers, Track bookings and activities.
+- Razorpay Payment Gateway for husslefree payment processing.
 # Grow your tourism
 ![Tourism](https://i.pinimg.com/736x/2f/a2/32/2fa2321cb1703d6eef32410774156fed.jpg)
 
