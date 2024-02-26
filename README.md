@@ -127,6 +127,7 @@ framework are exposed.
 - [Mysql]()
 - [intl](http://php.net/manual/en/intl.requirements.php)
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)
+- [DomPDF](https://github.com/dompdf/dompdf/releases)
 
 
 
