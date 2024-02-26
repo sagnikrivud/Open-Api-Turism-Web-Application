@@ -25,6 +25,9 @@ class PaymentController extends BaseController
      */
     public function makePayment()
     {
-        
+        $rawBody = $this->request->getBody();
+        $requestData = json_decode($rawBody, true);
+        $data = $this->payment->createPayment($requestData);
+        return $this->response->setJSON([ 'status' => 200, 'data' => $data]);
     }
 }

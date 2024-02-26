@@ -8,12 +8,15 @@ use App\Contracts\PaymentContract;
 class PaymentService implements PaymentContract {
   public $client;
 
+  protected $model;
+
   /**
    * Initiate Razorpay
    */
-  public function __construct()
+  public function __construct(Payment $model)
   {
     $this->client = new RazorPayClient(env('RAZORPAY_API_KEY'), env('RAZORPAY_API_SECRET'));
+    $this->model = $model;
   }
 
   /**
@@ -35,7 +38,50 @@ class PaymentService implements PaymentContract {
    */
   public function createPayment(array $order)
   {
-    $response = $this->client->order->create(array('receipt' => $order['reciept_number'], 'amount' => $order['amount'], 'currency' => $order['currency'], 'notes'=> array('tag'=> 'trip','description'=> 'Payment confirmed')));
+    $order['invoice_number'] = $this->genInvoice();
+    $response = $this->client->order->create(array('receipt' => $order['invoice_number'], 'amount' => $order['amount'], 'currency' => $order['currency'], 'notes'=> array('tag'=> 'trip','description'=> 'Payment confirmed')));
+    if($response){
+      $order['razorpay_response'] = $response;
+      $this->recordPayment($order);
+    }
     return $response;
+  }
+
+  /**
+   * Refund initiate on cancellation
+   *
+   * @param array $refundOrder
+   * @return void
+   */
+  public function refundInitiate(array $refundOrder)
+  {
+
+  }
+
+  /**
+   * Store to Transactions table
+   *
+   * @param array $order
+   * @return void
+   */
+  public function recordPayment(array $order)
+  {
+    $return = $this->model->insert($order);
+    return $return->insertID();
+  }
+
+  /**
+   * Generate Invoice Code
+   *
+   * @return void
+   */
+  public function genInvoice()
+  {
+    $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $randomString = '';
+    for ($i = 0; $i < 10; $i++) {
+      $randomString .= $characters[rand(0, strlen($characters) - 1)];
+    }
+    return $randomString;
   }
 }
