@@ -58,7 +58,7 @@ class AuthService implements AuthContract {
   {
     $user = $this->model->where('phone', $phone)->first();
     if($user!=null){
-      $otp = Otp::where('otp', $otpCode)->where('user_id',$user->id)->where('purpose', 'login')->first();
+      $otp = Otp::where('otp', $otpCode)->where('user_id', $user->id)->where('purpose', 'login')->get()->getRow();
       if($otp!=null){
         $data = [];
         $data['token'] = $this->generateToken($user);
