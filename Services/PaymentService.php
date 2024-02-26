@@ -4,19 +4,23 @@ namespace App\Services;
 use Razorpay\Api\Api as RazorPayClient;
 use App\Models\Payment\Payment;
 use App\Contracts\PaymentContract;
+use App\Models\Booking\Booking;
 
 class PaymentService implements PaymentContract {
   public $client;
 
   protected $model;
 
+  protected $booking;
+
   /**
    * Initiate Razorpay
    */
-  public function __construct(Payment $model)
+  public function __construct(Payment $model, Booking $booking)
   {
     $this->client = new RazorPayClient(env('RAZORPAY_API_KEY'), env('RAZORPAY_API_SECRET'));
     $this->model = $model;
+    $this->booking = $booking;
   }
 
   /**
@@ -58,6 +62,10 @@ class PaymentService implements PaymentContract {
     $invoice = $this->model->where('invoice_number', $invoiceNumber)->first();
     $response = $this->client->payment->fetch($refundOrder['paymentId'])->refund(array("amount"=> $refundOrder['amount'], "speed"=>"normal", "notes"=>array("notes_key_1"=>"Cancel trip.", "notes_key_2"=>"Refund"), "receipt"=>$invoice['invoice_number']));
     $invoice->update(['purpose' => 'Cancel Trip', 'razorpay_response' => $response]);
+    $this->booking->where('booking_number', $refundOrder['booking_number'])->update([
+      'status' => 'cancelled'
+    ]);
+    return $response;
   }
 
   /**
