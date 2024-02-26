@@ -107,6 +107,11 @@ RAZORPAY_CURRENCY='USD' #'INR', 'IDR', 'EUR', 'EGP', 'GHS'
 ```
 - Refer: https://github.com/razorpay/razorpay-php
 
+> Run to confirm setup process
+```sh
+$ php spark setup
+```
+
 ## Check System Logs
 > Open http://your-domain/logs in browser
 - (Refer) https://github.com/SeunMatt/codeigniter-log-viewer 
