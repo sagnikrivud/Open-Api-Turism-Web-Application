@@ -53,9 +53,11 @@ class PaymentService implements PaymentContract {
    * @param array $refundOrder
    * @return void
    */
-  public function refundInitiate(array $refundOrder)
+  public function refundInitiate(array $refundOrder, $invoiceNumber)
   {
-
+    $invoice = $this->model->where('invoice_number', $invoiceNumber)->first();
+    $response = $this->client->payment->fetch($refundOrder['paymentId'])->refund(array("amount"=> $refundOrder['amount'], "speed"=>"normal", "notes"=>array("notes_key_1"=>"Cancel trip.", "notes_key_2"=>"Refund"), "receipt"=>$invoice['invoice_number']));
+    $invoice->update(['purpose' => 'Cancel Trip', 'razorpay_response' => $response]);
   }
 
   /**

@@ -12,7 +12,7 @@ class Payment extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = ['user_id', 'purpose', 'amount', 'razorpay_response', 'status', 'invoice_number'];
+    protected $allowedFields    = ['booking_id','user_id', 'purpose', 'amount', 'razorpay_response', 'status', 'invoice_number'];
 
     protected bool $allowEmptyInserts = false;
 
