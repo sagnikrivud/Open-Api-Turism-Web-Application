@@ -12,6 +12,7 @@ __Application features__
 - Ready to deploy at server and start business.
 - Logo and Banner can be set according to business.
 - Admin Panel for adding/editing trips, manage Customers, Track bookings and activities.
+- Contents can be provided by API.
 - Razorpay Payment Gateway for husslefree payment processing.
 # Grow your tourism
 ![Tourism](https://i.pinimg.com/736x/2f/a2/32/2fa2321cb1703d6eef32410774156fed.jpg)
