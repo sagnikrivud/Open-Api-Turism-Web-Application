@@ -8,7 +8,7 @@ Trip Planning:
 Itinerary Creation: 
 Users can plan their entire trip, from choosing destinations and activities to creating detailed itineraries. Tourism sites often offer tools to organize and customize travel plans.
 
-Application features 
+__Application features__ 
 - Ready to deploy at server and start business.
 - Logo and Banner can be set according to business.
 - Admin Panel for adding/editing trips, manage Customers, Track bookings and activities.
