@@ -141,6 +141,8 @@ framework are exposed.
 ![Alt Text](blobs/login.png)
 
 ## API  Documentation
+- API URL: https://your-domain.com/api
+
 | API URL                 | Parameters          | Method   |
 |-------------------------|---------------------|----------|
 | `api/login`             | `phone, otp_code`   | POST     |
