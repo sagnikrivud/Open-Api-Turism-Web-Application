@@ -10,7 +10,7 @@ Users can plan their entire trip, from choosing destinations and activities to c
 
 __Application features__ 
 - Ready to deploy at server and start business.
-- Logo and Banner can be set according to business.
+- Logo, Site Name and Banner can be set according to business.
 - Admin Panel for adding/editing trips, manage Customers, Track bookings and activities.
 - Contents can be provided by API.
 - Razorpay Payment Gateway for husslefree payment processing.
