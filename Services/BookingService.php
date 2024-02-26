@@ -4,6 +4,7 @@ namespace App\Services;
 use App\Models\User;
 use App\Models\Booking;
 use App\Contracts\BookingContract;
+use App\Services\PaymentService;
 
 class BookingService {
   public $model;
@@ -13,10 +14,11 @@ class BookingService {
    *
    * @param Booking $model
    */
-  public function __construct(Booking $model)
+  public function __construct(Booking $model, PaymentService $payment)
   {
     $this->model = $model;
     $this->auth = service('authentication');
+    $this->payment = $payment;
   }
 
   /**
@@ -37,7 +39,7 @@ class BookingService {
    */
   public function confirmTrip($request)
   {
-
+    s
   }
 
   /**
@@ -48,7 +50,7 @@ class BookingService {
    */
   public function cancelTrip($request)
   {
-
+    return $this->payment->refundInitiate($request, $request['invoiceNumber']);
   }
 
   /**
