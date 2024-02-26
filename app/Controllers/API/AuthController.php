@@ -55,7 +55,10 @@ class AuthController extends BaseController
      */
     public function userLogin()
     {
-        return $this->response->setJSON(['message' => 'logged in', 'status' => 200]);
+        $phone   = $this->request->getPost('phone');
+        $otpCode = $this->request->getPost('otp_code');
+        $data = $this->auth->userLogin($phone, $otpCode);
+        return $this->response->setJSON(['message' => $data, 'status' => 200]);
     }
 
     /**

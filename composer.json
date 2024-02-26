@@ -16,6 +16,7 @@
         "codeigniter4/framework": "^4.0",
         "cviebrock/eloquent-sluggable": "^10.0",
         "dompdf/dompdf": "^2.0",
+        "firebase/php-jwt": "^6.10",
         "laravel/passport": "^11.10",
         "league/oauth2-server": "^8.5",
         "razorpay/razorpay": "2.*",

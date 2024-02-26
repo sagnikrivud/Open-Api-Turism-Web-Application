@@ -32,4 +32,13 @@ interface AuthContract {
    * @return void
    */
   public function validateOtp($request);
+
+  /**
+   * Generate JWT Auth Token
+   *
+   * @param array $data
+   * @param integer $expiration
+   * @return string
+   */
+  public function generateToken(array $data, int $expiration = 3600): string;
 }
