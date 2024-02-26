@@ -1,8 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-use Twilio\Rest\Client;
-
 function sendMailer($sendTo, $subject, $content) {
   $email = \Config\Services::email();
   $email->setTo($sendTo);
