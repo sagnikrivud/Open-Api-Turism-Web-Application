@@ -41,4 +41,12 @@ interface AuthContract {
    * @return string
    */
   public function generateToken(array $data, int $expiration = 3600): string;
+
+  /**
+   * Send OTP to requested phone number
+   *
+   * @param [type] $phone
+   * @return void
+   */
+  public function sendOtp($phone);
 }

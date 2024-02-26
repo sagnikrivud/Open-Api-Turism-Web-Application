@@ -101,4 +101,23 @@ class AuthService implements AuthContract {
 
         return $token;
   }
+
+  /**
+   * Send OTP to requested phone number
+   *
+   * @param [type] $phone
+   * @return void
+   */
+  public function sendOtp($phone)
+  {
+    helper(['Message', 'Otp']);
+    $user = $this->model->where('phone', $phone)->first();
+    if($user != null){
+      $code = generateOtpNumber($user->id, 'login');
+      $message = 'Your OTP is '.$code;
+      smsNotification($user->phone, $message);
+      return true;
+    }
+      return false;
+  }
 }

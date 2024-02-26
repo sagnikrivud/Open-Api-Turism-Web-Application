@@ -58,7 +58,11 @@ class AuthController extends BaseController
         $phone   = $this->request->getPost('phone');
         $otpCode = $this->request->getPost('otp_code');
         $data = $this->auth->userLogin($phone, $otpCode);
-        return $this->response->setJSON(['message' => $data, 'status' => 200]);
+        if($data != null){
+         return $this->response->setJSON(['message' => $data, 'status' => 200]);
+        }else{
+         return $this->response->setJSON(['message' => 'Unable to login', 'status' => 505]);
+        }
     }
 
     /**
@@ -68,7 +72,13 @@ class AuthController extends BaseController
      */
     public function sendOtp()
     {
-        return $this->response->setJSON(['message' => 'OTP send successfully', 'status' => 200]);
+        $phone   = $this->request->getPost('phone');
+        $data = $this->auth->sendOtp($phone);
+        if($data){
+         return $this->response->setJSON(['message' => 'OTP send successfully', 'status' => 200]);
+        }else{
+         return $this->response->setJSON(['message' => 'Unable to send', 'status' => 505]);
+        }
     }
 
     /**
