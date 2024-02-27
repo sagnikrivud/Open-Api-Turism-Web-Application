@@ -1,6 +1,6 @@
 # OPEN API For Travel Agency application![Logo](https://logowik.com/content/uploads/images/651_codeigniter.jpg)
 
-Information Access:
+__Information Access:__
 
 Destination Details: Tourism sites provide comprehensive information about various destinations, including attractions, accommodations, activities, and local culture. This helps travelers make informed decisions about where to go and what to do.
 Trip Planning:
