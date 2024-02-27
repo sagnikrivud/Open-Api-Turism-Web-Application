@@ -18,5 +18,16 @@ $routes->match(['get', 'post'],'admin/login', 'Admin\Controller::adminLogin');
 $routes->get('admin/dashboard', 'Admin\Controller::index');
 $routes->post('admin/logout', 'Admin\Controller::adminLogout');
 $routes->get('admin/forgot/password', 'Admin\Controller::adminForgotPassword');
-$routes->get('api/content/headers', 'API\ContentController::header');
-$routes->get('api/content/get/(:segment)', 'API\ContentController::getContent/$1');
+
+$routes->group('api', function ($routes) {
+  /**
+  * Content Routes
+  */
+  $routes->group('content',function($routes){
+    $routes->get('headers', 'API\ContentController::header');
+    $routes->get('get/(:segment)', 'API\ContentController::getContent/$1');
+  });
+  /**
+   * Trip Routes
+   */
+});
