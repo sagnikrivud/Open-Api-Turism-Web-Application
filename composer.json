@@ -14,6 +14,7 @@
         "agungsugiarto/codeigniter4-cors": "^3.0",
         "chriskacerguis/codeigniter-restserver": "^3.1",
         "codeigniter4/framework": "^4.0",
+        "codeigniterext/maintenancemode": "^0.0.2",
         "cviebrock/eloquent-sluggable": "^10.0",
         "dompdf/dompdf": "^2.0",
         "firebase/php-jwt": "^6.10",
