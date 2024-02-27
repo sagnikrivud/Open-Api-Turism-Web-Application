@@ -5,6 +5,7 @@ use App\Models\User;
 use App\Contracts\AuthContract;
 use Firebase\JWT\JWT;
 use App\Models\Otp;
+$logger = service('logger');
 
 class AuthService implements AuthContract {
   protected $model;
@@ -63,6 +64,8 @@ class AuthService implements AuthContract {
         $data = [];
         $data['token'] = $this->generateToken($user);
         $data['user'] = $user;
+        $session = session();
+        $session->set('user_id', $user->id);
         return $data;
       }
       return false;
