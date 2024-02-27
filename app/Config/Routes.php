@@ -19,3 +19,4 @@ $routes->get('admin/dashboard', 'Admin\Controller::index');
 $routes->post('admin/logout', 'Admin\Controller::adminLogout');
 $routes->get('admin/forgot/password', 'Admin\Controller::adminForgotPassword');
 $routes->get('api/content/headers', 'API\ContentController::header');
+$routes->get('api/content/get/(:segment)', 'API\ContentController::getContent/$1');
