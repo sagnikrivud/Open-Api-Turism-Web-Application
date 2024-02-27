@@ -14,11 +14,11 @@ class BookingService {
    *
    * @param Booking $model
    */
-  public function __construct(Booking $model, PaymentService $payment)
+  public function __construct()
   {
-    $this->model = $model;
+    $this->model = new Booking();
     $this->auth = service('authentication');
-    $this->payment = $payment;
+    $this->payment = new PaymentService();
   }
 
   /**

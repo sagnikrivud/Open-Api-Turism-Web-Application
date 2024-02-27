@@ -13,9 +13,9 @@ class PaymentController extends BaseController
     /**
      * Inject Service
      */
-    public function __construct(PaymentService $payment)
+    public function __construct()
     {
-        $this->payment = $payment;
+        $this->payment = new PaymentService();
     }
     
     /**

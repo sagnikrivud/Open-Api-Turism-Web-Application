@@ -10,9 +10,9 @@ class BookingController extends BaseController
 {
     protected $booking;
 
-    public function __construct(BookingService $booking)
+    public function __construct()
     {
-        $this->booking = $booking;
+        $this->booking = new BookingService();
     }
     /**
      * Client Booking list

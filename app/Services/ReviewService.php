@@ -8,9 +8,9 @@ class ReviewService {
 
   protected $model;
 
-  public function __construct(Review $model)
+  public function __construct()
   {
-    $this->model = $model;
+    $this->model = new Review();
   }
 
   /**

@@ -16,11 +16,11 @@ class PaymentService implements PaymentContract {
   /**
    * Initiate Razorpay
    */
-  public function __construct(Payment $model, Booking $booking)
+  public function __construct()
   {
     $this->client = new RazorPayClient(env('RAZORPAY_API_KEY'), env('RAZORPAY_API_SECRET'));
-    $this->model = $model;
-    $this->booking = $booking;
+    $this->model = new Payment();
+    $this->booking = new Booking();
   }
 
   /**

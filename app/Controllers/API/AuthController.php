@@ -18,9 +18,9 @@ class AuthController extends BaseController
      *
      * @param AuthService $auth
      */
-    public function __construct(AuthService $auth)
+    public function __construct()
     {
-        $this->auth = $auth;
+        $this->auth = new AuthService();
     }
 
     /**
