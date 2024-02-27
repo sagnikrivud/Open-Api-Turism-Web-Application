@@ -161,7 +161,7 @@ framework are exposed.
 | `api/content/logo`      |  NULL               | GET      |
 | `api/trips`             |  NULL               | GET      |
 | `api/trip/{id}`         | `id`                | GET      |
-| `api/search/trip`       | `keyword`           | POST     |
+| `api/trip/search`       | `keyword`           | POST     |
 | `api/trip/review`       | `trip_id, user_id, review{int}, comment{text}`  | POST |
 | `api/trip/my-trips`     | `user_id`           | GET      |
 | `api/trip/confirm`      | `user_id, trip_id, date`| POST |

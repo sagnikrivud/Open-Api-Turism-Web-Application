@@ -33,5 +33,6 @@ $routes->group('api', function ($routes) {
   $routes->get('trips', 'API\TripController::trips');
   $routes->group('trip', function($routes){
     $routes->get('trip/(:segment)', 'API\TripController::tripAbout/$1');
+    $routes->post('search', 'API\TripController::searchTrip');
   });
 });
