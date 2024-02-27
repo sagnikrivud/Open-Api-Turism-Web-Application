@@ -25,7 +25,7 @@ class Filters extends BaseConfig
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
         'admin' => \App\Middleware\AdminCheck::class,
-        'cors'          => \Agungsugiarto\Boilerplate\Middlewares\CorsMiddleware::class,
+        // 'cors'          => \Agungsugiarto\Boilerplate\Middlewares\CorsMiddleware::class,
     ];
 
     /**
@@ -39,7 +39,7 @@ class Filters extends BaseConfig
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
-            'cors'
+            // 'cors'
         ],
         'after' => [
             'toolbar',

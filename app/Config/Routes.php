@@ -18,3 +18,4 @@ $routes->match(['get', 'post'],'admin/login', 'Admin\Controller::adminLogin');
 $routes->get('admin/dashboard', 'Admin\Controller::index');
 $routes->post('admin/logout', 'Admin\Controller::adminLogout');
 $routes->get('admin/forgot/password', 'Admin\Controller::adminForgotPassword');
+$routes->get('api/content/headers', 'API\ContentController::header');

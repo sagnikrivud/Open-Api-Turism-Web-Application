@@ -4,7 +4,7 @@ namespace App\Services;
 use App\Models\Settings;
 use App\Models\Blog;
 use App\Contracts\ContentContract;
-use App\Models\Content;
+use App\Models\Content\Content;
 
 class ContentService implements ContentContract {
 
@@ -16,11 +16,11 @@ class ContentService implements ContentContract {
 
   protected $content;
 
-  public function __construct(Settings $settings, Blog $blog, Content $content)
+  public function __construct()
   {
-    $this->model = $settings;
-    $this->blog = $blog;
-    $this->content = $content;
+    $this->model = new Settings();
+    $this->blog = new Blog();
+    $this->content = new Content();
   }
 
   /**

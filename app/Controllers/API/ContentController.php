@@ -17,10 +17,10 @@ class ContentController extends BaseController
      *
      * @param ContentService $content
      */
-    public function __construct(ContentService $content, Settings $settings)
+    public function __construct()
     {
-        $this->content  = $content;
-        $this->settings = $settings;
+        $this->content  = new ContentService();
+        $this->settings = new Settings();
     }
 
     /**
