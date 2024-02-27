@@ -62,7 +62,7 @@ class ContentController extends BaseController
      *
      * @return string
      */
-    public function applicationLogo(): string
+    public function applicationLogo(): object
     {
         $logo = $this->settings->getLogo();
         $data['logo_url'] = base_url($logo);

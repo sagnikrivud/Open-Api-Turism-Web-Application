@@ -27,6 +27,7 @@ if($settings['under_maintenance'] == false) {
   */
   $routes->group('content',function($routes){
     $routes->get('headers', 'API\ContentController::header');
+    $routes->get('logo', 'API\ContentController::applicationLogo');
     $routes->get('get/(:segment)', 'API\ContentController::getContent/$1');
   });
   /**
