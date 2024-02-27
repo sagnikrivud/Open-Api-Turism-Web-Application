@@ -30,4 +30,8 @@ $routes->group('api', function ($routes) {
   /**
    * Trip Routes
    */
+  $routes->get('trips', 'API\TripController::trips');
+  $routes->group('trip', function($routes){
+    $routes->get('trip/(:segment)', 'API\TripController::tripAbout/$1');
+  });
 });
