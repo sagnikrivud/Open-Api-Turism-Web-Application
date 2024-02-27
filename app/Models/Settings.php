@@ -30,4 +30,15 @@ class Settings extends Model
     {
         return $this->update(['logo' => $logoPath]);
     }
+
+    /**
+     * Settings Row fetch
+     *
+     * @param [type] $id
+     * @return void
+     */
+    public function getSettingsById($id)
+    {
+        return $this->find($id);
+    }
 }

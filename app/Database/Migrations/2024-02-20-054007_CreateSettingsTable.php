@@ -18,18 +18,22 @@ class CreateSettingsTable extends Migration
             'site_name' => [
                 'type' => 'VARCHAR',
                 'constraint' => '100',
+                'null' => true,
             ],
             'contact_email' => [
                 'type' => 'VARCHAR',
                 'constraint' => '100',
+                'null' => true,
             ],
             'logo' => [
                 'type' => 'VARCHAR',
                 'constraint' => '255',
+                'null' => true,
             ],
             'tag_line' => [
                 'type' => 'VARCHAR',
                 'constraint' => '255',
+                'null' => true,
             ],
             'under_maintenance' => [
                 'type' => 'BOOLEAN',
@@ -38,6 +42,7 @@ class CreateSettingsTable extends Migration
             'currency' => [
                 'type' => 'VARCHAR',
                 'constraint' => '255',
+                'null' => true,
             ]
         ]);
         $this->forge->addKey('id', true);

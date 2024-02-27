@@ -13,4 +13,14 @@ class Home extends BaseController
         ];
         return $this->response->setJSON($data);
     }
+
+    public function indexNot(): object
+    {
+        $data = [
+            'message' => 'Site under maintenance',
+            'status' => false,
+            'page' => 'welcome_message'
+        ];
+        return $this->response->setJSON($data);
+    }
 }
