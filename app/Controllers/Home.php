@@ -7,7 +7,7 @@ class Home extends BaseController
     public function index(): object
     {
         $data = [
-            'message' => 'Welcome to CI page',
+            'message' => 'Welcome to API Collection',
             'status' => true,
             'page' => 'welcome_message'
         ];
