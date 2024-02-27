@@ -75,7 +75,7 @@ class AuthController extends BaseController
         $phone   = $this->request->getPost('phone');
         $data = $this->auth->sendOtp($phone);
         if($data){
-         return $this->response->setJSON(['message' => 'OTP send successfully', 'status' => 200]);
+         return $this->response->setJSON(['message' => 'OTP send successfully', 'warning' => 'Valid for 10 minites', 'status' => 200]);
         }else{
          return $this->response->setJSON(['message' => 'Unable to send', 'status' => 505]);
         }
