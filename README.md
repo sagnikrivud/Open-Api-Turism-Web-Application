@@ -117,6 +117,21 @@ JWT_SECRET_KEY=''
 $ php spark setup
 ```
 
+## Server Maintenance Mode
+> For put your application into maintenance mode you can use following
+```sh
+$ php spark mm:down
+```
+> For check status
+```sh
+$ php spark mm:status
+```
+> To Put application live again after being in maintenance mode
+```sh
+$ php spark mm:up
+```
+- Refer: https://github.com/arashsaffari/maintenancemode
+
 ## Check System Logs
 > Open http://your-domain/logs in browser
 - (Refer) https://github.com/SeunMatt/codeigniter-log-viewer 
