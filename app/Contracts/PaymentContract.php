@@ -23,7 +23,7 @@ interface PaymentContract {
    * @param array $refundOrder
    * @return void
    */
-  public function refundInitiate(array $refundOrder);
+  public function refundInitiate(array $refundOrder, $invoiceNumber);
 
   /**
    * Store to Transactions table

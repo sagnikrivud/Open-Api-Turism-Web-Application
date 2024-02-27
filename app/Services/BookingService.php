@@ -2,7 +2,7 @@
 
 namespace App\Services;
 use App\Models\User;
-use App\Models\Booking;
+use App\Models\Booking\Booking;
 use App\Contracts\BookingContract;
 use App\Services\PaymentService;
 
@@ -39,7 +39,7 @@ class BookingService {
    */
   public function confirmTrip($request)
   {
-    s
+    
   }
 
   /**
