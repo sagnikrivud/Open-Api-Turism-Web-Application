@@ -30,7 +30,10 @@ class AuthController extends BaseController
      */
     public function userRegister()
     {
-        return $this->response->setJSON(['message' => 'welcome', 'status' => 200]);
+        $requestBody = $this->request->getBody();
+        $request = json_decode($requestBody, true);
+        $data = $this->auth->userRegister($request);
+        return $this->response->setJSON(['message' => $data, 'status' => 200]);
     }
 
     /**
