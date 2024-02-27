@@ -15,6 +15,7 @@ __Application features__
 - Ready made API Collection for Frontend web or Mobile APP.  
 - Contents can be provided by API.
 - Razorpay Payment Gateway for husslefree payment processing.
+- Contents available for About Us, Announcements, Privacy Policy, Travel blogs, Contact us page etc.
 # Grow your tourism
 ![Tourism](https://i.pinimg.com/736x/2f/a2/32/2fa2321cb1703d6eef32410774156fed.jpg)
 
