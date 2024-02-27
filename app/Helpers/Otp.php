@@ -9,7 +9,8 @@ function generateOtpNumber($userId, $purpose='login')
   $data = [
     'otp'     => $code,
     'user_id' => $userId,
-    'purpose' => $purpose
+    'purpose' => $purpose,
+    'expired_at' => date('Y-m-d H:i:s', strtotime('+10 minutes'))
   ];
   $otpModel->insert($data);
   return $code;
