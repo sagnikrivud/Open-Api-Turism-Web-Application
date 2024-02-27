@@ -14,7 +14,7 @@ $routes->get('/api/', function(){
   return array('status' => true, 'message'=> 'Welcome to the API!');
 });
 
-if ($settings['under_maintenance'] == false) {
+if($settings['under_maintenance'] == false) {
   $routes->get('/', 'Home::index');
   $routes->get('logs', "Log\LogViewerController::index");
   $routes->match(['get', 'post'],'admin/login', 'Admin\Controller::adminLogin');
