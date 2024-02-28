@@ -65,6 +65,7 @@ class ContentController extends BaseController
     public function applicationLogo(): object
     {
         $logo = $this->settings->getLogo();
+        $data['application'] = $this->settings->getSettingsById(1);
         $data['logo_url'] = base_url($logo);
         return $this->response->setJSON($data);
     }
