@@ -91,7 +91,7 @@ TWILIO_AUTH_TOKEN=''
 ```env
 APP_URL='http://domain.com/api/'
 ```
-> Configure the SMTP Details at .env for Mailing
+> Configure the SMTP Details at .env for Mailing, (Google, Twilio, Mailtrap, Mailchimp, Hostinger)
 ```env
 SMTP_HOST=''
 SMTPUSER=''
