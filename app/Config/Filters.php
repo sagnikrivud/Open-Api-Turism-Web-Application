@@ -40,6 +40,7 @@ class Filters extends BaseConfig
             // 'csrf',
             // 'invalidchars',
             // 'cors'
+            // 'admin'
         ],
         'after' => [
             'toolbar',
