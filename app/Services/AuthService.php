@@ -137,4 +137,20 @@ class AuthService implements AuthContract {
     }
       return false;
   }
+
+  /**
+   * Update Customer profile API
+   *
+   * @param array $request
+   * @return void
+   */
+  public function updateCustomerProfile(array $request)
+  {
+    $profile['first_name'] = $request['first_name'] ?? null;
+    $profile['last_name']  = $request['last_name'] ?? null;
+    $profile['doc_type']   = $request['doc_type'] ?? null;
+    $profile['doc_number'] = $request['doc_number'] ?? null;
+    $this->profile->where('user_id', $request['user_id'])->set($profile_data)->update();
+    return true;
+  }
 }

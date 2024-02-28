@@ -97,4 +97,18 @@ class AuthController extends BaseController
         }
             return false;
     }
+
+    /**
+   * Update Customer profile API
+   *
+   * @param array $request
+   * @return void
+   */
+    public function updateCustomerProfile()
+    {
+        $requestBody = $this->request->getBody();
+        $request = json_decode($requestBody, true);
+        $data = $this->auth->updateCustomerProfile($request);
+        return $this->response->setJSON(['message' => $data, 'status' => 200]);
+    }
 }

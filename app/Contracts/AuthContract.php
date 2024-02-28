@@ -49,4 +49,12 @@ interface AuthContract {
    * @return void
    */
   public function sendOtp($phone);
+
+  /**
+   * Update Customer profile API
+   *
+   * @param array $request
+   * @return void
+   */
+  public function updateCustomerProfile(array $request);
 }
