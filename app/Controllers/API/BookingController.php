@@ -48,4 +48,14 @@ class BookingController extends BaseController
         $data = $this->booking->cancelTrip($request);
         return $this->response->setJSON(['data' => $data, 'status' => 200]);
     }
+
+    /**
+     * Post review
+     *
+     * @return void
+     */
+    public function reviewTrip()
+    {
+        return $this->response->setJSON(['message' => 'Submitted', 'status' => 200]);
+    }
 }

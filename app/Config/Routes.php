@@ -45,9 +45,12 @@ if($settings['under_maintenance'] == false) {
      */
     $routes->get('trips', 'API\TripController::trips');
     $routes->group('trip', function($routes){
-      $routes->get('trip/(:segment)', 'API\TripController::tripAbout/$1');
+      $routes->get('(:segment)', 'API\TripController::tripAbout/$1');
       $routes->post('search', 'API\TripController::searchTrip');
       $routes->get('my-trips', 'API\BookingController::myTrips');
+      $routes->post('confirm', 'API\BookingController::confirmTrip');
+      $routes->delete('cancel', 'API\BookingController::cancelTrip');
+      $routes->post('review', 'API\BookingController::reviewTrip');
     });
 });
 }else{
