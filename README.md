@@ -108,7 +108,8 @@ RAZORPAY_CURRENCY='USD' #'INR', 'IDR', 'EUR', 'EGP', 'GHS'
 ```
 - Refer: https://github.com/razorpay/razorpay-php
 
-> Add JWT key to .env, refer this URL: https://auth0.com/signup?&signUpData=%7B%22category%22%3A%22docs%22%7D
+> Add JWT key to .env, refer this 
+- URL: https://auth0.com/signup?&signUpData=%7B%22category%22%3A%22docs%22%7D
 ```env
 JWT_SECRET_KEY=''
 ```
