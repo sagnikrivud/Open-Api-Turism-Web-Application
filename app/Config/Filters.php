@@ -25,6 +25,7 @@ class Filters extends BaseConfig
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
         'admin' => \App\Middleware\AdminCheck::class,
+        'auth'  => \App\Middleware\JwtMiddleware::class, // JWT Middleware
         // 'cors'          => \Agungsugiarto\Boilerplate\Middlewares\CorsMiddleware::class,
     ];
 

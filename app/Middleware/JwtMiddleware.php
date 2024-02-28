@@ -5,10 +5,10 @@ namespace App\Middleware;
 use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
-use CodeIgniter\Middleware\BaseMiddleware;
+use CodeIgniter\Middleware\Middleware;
 use Firebase\JWT\JWT;
 
-class JwtMiddleware extends BaseMiddleware
+class JwtMiddleware extends Middleware
 {
     use ResponseTrait;
 

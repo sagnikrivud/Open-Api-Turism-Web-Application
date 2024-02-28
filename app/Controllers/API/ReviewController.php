@@ -9,6 +9,13 @@ use App\Services\ReviewService;
 class ReviewController extends BaseController
 {
     /**
+     * Initiate Review service
+     */
+    public function __construct()
+    {
+        $this->review = new ReviewService();
+    }
+    /**
      * Submit review from APP end via API
      *
      * @return void
@@ -16,7 +23,10 @@ class ReviewController extends BaseController
     public function postReview()
     {
         if ($this->request->getMethod() === 'post'){
-            //  Add service
+            $requestBody = $this->request->getBody();
+            $request = json_decode($requestBody, true);
+            $data = $this->review->submitReview($request);
+            return $this->response->setJSON(['message' => $data, 'status' => 200]);
         }
     }
 }

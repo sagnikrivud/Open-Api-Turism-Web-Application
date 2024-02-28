@@ -19,7 +19,7 @@ class ReviewService {
    * @param [type] $request
    * @return void
    */
-  public function submitReview($request)
+  public function submitReview(array $request)
   {
 
   }
