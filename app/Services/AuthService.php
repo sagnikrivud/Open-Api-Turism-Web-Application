@@ -57,8 +57,6 @@ class AuthService implements AuthContract {
      helper('Message');
      $this->model->insert($request);
      $profile['user_id'] = $this->model->insertID();
-     $profile['first_name'] = $request['first_name'];
-     $profile['last_name']  = $request['last_name'];
      $this->profile->insert($profile);
      $application = $this->setiings->getSettingsById(1);
      smsNotification($request['phone'], 'Welcome to '.$application['site_name']);

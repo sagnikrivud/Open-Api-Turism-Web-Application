@@ -23,10 +23,12 @@ class CreateProfilesTable extends Migration
             'first_name' => [
                 'type' => 'VARCHAR',
                 'constraint' => '100',
+                'null' => true,
             ],
             'last_name' => [
                 'type' => 'VARCHAR',
                 'constraint' => '100',
+                'null' => true,
             ],
         ]);
         $this->forge->addKey('id', true);
