@@ -31,11 +31,11 @@ class ContentController extends BaseController
     public function header(): object
     {
         $data = [
-            ['title' => 'about-us', 'possessive' => true],
-            ['title' => 'contact',  'possessive' => true],
-            ['title' => 'announcement', 'possessive' => true ],
-            ['title' => 'Travel blogs',    'possessive' => true],
-            ['title' => 'Privacy policy', 'possessive' => true]
+            ['title' => 'about-us', 'possessive' => true, 'order' => 1],
+            ['title' => 'contact',  'possessive' => true, 'order' => 2],
+            ['title' => 'announcement', 'possessive' => true, 'order' => 3 ],
+            ['title' => 'Travel blogs',    'possessive' => true, 'order' => 4],
+            ['title' => 'Privacy policy', 'possessive' => true, 'order' => 5]
         ];
         return $this->response->setJSON($data);
     }
