@@ -174,7 +174,7 @@ framework are exposed.
 | `api/register`          | `phone, email`      | POST     |
 | `api/otp`               | `phone`             | POST     |
 | `api/validate-otp`      | `phone, otp_code`   | PUT      |
-| `api/profile`           | `phone, first_name, last_name, document_type, document_number` | POST |
+| `api/profile`           | `email, first_name, last_name, document_type, document_number` | POST |
 | `api/content/headers`   |  NULL               | GET      |
 | `api/content/get/{title}`| `title`            | GET      |
 | `api/content/logo`      |  NULL               | GET      |
