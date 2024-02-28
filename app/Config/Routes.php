@@ -52,6 +52,7 @@ if($settings['under_maintenance'] == false) {
       $routes->delete('cancel', 'API\BookingController::cancelTrip');
       $routes->post('review', 'API\BookingController::reviewTrip');
     });
+    $routes->post('make/payment','API\PaymentController::makePayment');
   });
 }else{
   $routes->get('/', 'Home::indexNot');
