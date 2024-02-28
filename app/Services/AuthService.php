@@ -5,6 +5,8 @@ use App\Models\User;
 use App\Contracts\AuthContract;
 use Firebase\JWT\JWT;
 use App\Models\Otp;
+use App\Models\Profile;
+use App\Models\Settings;
 $logger = service('logger');
 
 class AuthService implements AuthContract {
@@ -16,6 +18,10 @@ class AuthService implements AuthContract {
 
   protected $otp;
 
+  protected $profile;
+
+  protected $setiings;
+
   /**
    * Initiate User Model
    *
@@ -26,6 +32,8 @@ class AuthService implements AuthContract {
     $this->model = $user;
     $this->key = env('JWT_SECRET_KEY');
     $this->otp = new Otp();
+    $this->profile = new Profile();
+    $this->setiings = new Settings();
   }
 
   /**
@@ -46,7 +54,15 @@ class AuthService implements AuthContract {
    */
   public function userRegister($request)
   {
-
+     helper('Message');
+     $this->model->insert($request);
+     $profile['user_id'] = $this->model->insertID();
+     $profile['first_name'] = $request['first_name'];
+     $profile['last_name']  = $request['last_name'];
+     $this->profile->insert($profile);
+     $application = $this->setiings->getSettingsById(1);
+     smsNotification($request['phone'], 'Welcome to '.$application['site_name']);
+     return true;
   }
 
   /**
