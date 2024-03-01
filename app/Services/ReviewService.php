@@ -21,6 +21,6 @@ class ReviewService {
    */
   public function submitReview(array $request)
   {
-
+    return $this->model->insert($request);
   }
 }
