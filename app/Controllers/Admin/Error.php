@@ -7,7 +7,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class Error extends BaseController
 {
-    function ___construct()
+    function __construct()
     {
         parent::__construct();
     }
