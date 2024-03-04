@@ -66,7 +66,6 @@ $ ssh-add ~/.ssh/id_rsa
 ```
 >The SSH key pair (public and private keys) will be generated. You'll see output similar to:
 - Your identification has been saved in /path/to/your/home/.ssh/id_rsa.
-- Your identification has been saved in /path/to/your/home/.ssh/id_rsa.
 
 
 > Setup .env configuration for Database connect
