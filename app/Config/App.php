@@ -182,5 +182,6 @@ class App extends BaseConfig
     public function __construct()
     {
         $this->appTimezone = env('APP_TIMEZONE', 'UTC');
+        $this->baseURL = env('APP_URL', 'http://localhost:8080/');
     }
 }
