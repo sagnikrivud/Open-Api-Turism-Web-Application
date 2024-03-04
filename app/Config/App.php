@@ -174,4 +174,13 @@ class App extends BaseConfig
      * @see http://www.w3.org/TR/CSP/
      */
     public bool $CSPEnabled = false;
+
+
+    /**
+     * Initialize New values for App config
+     */
+    public function __construct()
+    {
+        $this->appTimezone = env('APP_TIMEZONE', 'UTC');
+    }
 }
