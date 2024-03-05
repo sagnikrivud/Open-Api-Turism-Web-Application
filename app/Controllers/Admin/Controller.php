@@ -152,9 +152,9 @@ class Controller extends BaseController
             $dotenv->setVariable('MAIL_FROM', $mailFrom);
             $dotenv->save();
 
-            return 'SMTP credentials updated successfully.';
+            return redirect()->to('admin/smtp-settings')->with('success', 'SMTP credentials updated successfully.');
         } else {
-            return 'Cannot write to the .env file. Please check file permissions.';
+            return redirect()->to('admin/smtp-settings')->with('error', 'Cannot update to the .env file');
         }
     }
 }
