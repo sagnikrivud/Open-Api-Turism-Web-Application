@@ -6,6 +6,8 @@ use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Services\AuthService;
 use CodeIgniter\API\ResponseTrait;
+use App\Models\Otp;
+use App\Models\User;
 
 class AuthController extends BaseController
 {
@@ -89,13 +91,20 @@ class AuthController extends BaseController
      *
      * @return void
      */
-    public function validateOtp($userID, $otpCode, $purpose)
+    public function validateOtp()
     {
-        $exist = Otp::where('user_id', $userID)->where('otp', $otpCode)->where('purpose', $purpose)->where('expired_at', '>', now())->first();
+        $phone   = $this->request->getPost('phone');
+        $purpose = $this->request->getPost('purpose');
+        $otpCode = $this->request->getPost('otpCode');
+        $user = User::where('phone', $phone)->first();
+        $exist = Otp::where('user_id', $user->id)
+                    ->where('otp', $otpCode)
+                    ->where('purpose', $purpose)
+                    ->where('expired_at', '>', now())->first();
         if($exist != null){
-            return true;
+            return $this->response->setJSON(['message' => true, 'status' => 200]);
         }
-            return false;
+            return $this->response->setJSON(['message' => false, 'status' => 404]);
     }
 
     /**
