@@ -5,6 +5,7 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\User;
+use CodeIgniter\Config\Services;
 
 class Controller extends BaseController
 {
@@ -127,5 +128,33 @@ class Controller extends BaseController
     public function adminForgotPassword()
     {
         return view('admin/forgot-password');
+    }
+
+    public function adminSMTPSettings()
+    {
+        return view('admin/smtp-settings');
+    }
+    public function updateSMTP()
+    {
+        $smtpHost = $this->request->getPost('smtp_host');
+        $smtpUser = $this->request->getPost('smtp_user');
+        $smtpPass = $this->request->getPost('smtp_user');
+        $mailFrom = $this->request->getPost('mail_from');
+        $envPath = FCPATH . '.env';
+        if (is_writable($envPath)) {
+            $dotenv = Services::dotenv();
+            $dotenv->load();
+
+            // Update the desired environment variables
+            $dotenv->setVariable('SMTP_HOST', $smtpHost);
+            $dotenv->setVariable('SMTP_USER', $smtpUser);
+            $dotenv->setVariable('SMTP_PASS', $smtpPass);
+            $dotenv->setVariable('MAIL_FROM', $mailFrom);
+            $dotenv->save();
+
+            return 'SMTP credentials updated successfully.';
+        } else {
+            return 'Cannot write to the .env file. Please check file permissions.';
+        }
     }
 }

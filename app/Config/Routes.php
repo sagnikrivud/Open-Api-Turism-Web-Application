@@ -18,9 +18,9 @@ $routes->get('/api/', function(){
 $routes->get('logs', "Log\LogViewerController::index");
 $routes->match(['get', 'post'],'admin/login', 'Admin\Controller::adminLogin');
 $routes->group('admin', ['namespace' => 'App\Controllers\Admin', 'filter' => 'admin'], function($routes){
-  $routes->get('dashboard', 'AdminController::index');
+  $routes->get('dashboard', 'Controller::index');
+  $routes->get('smtp-settings', 'Controller::adminSMTPSettings');
 });
-// $routes->get('admin/dashboard', 'Admin\Controller::index');
 $routes->post('admin/logout', 'Admin\Controller::adminLogout');
 $routes->get('admin/forgot/password', 'Admin\Controller::adminForgotPassword');
 
