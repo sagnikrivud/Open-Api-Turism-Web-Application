@@ -130,10 +130,21 @@ class Controller extends BaseController
         return view('admin/forgot-password');
     }
 
+    /**
+     * SMTP Settings page at admin panel
+     *
+     * @return void
+     */
     public function adminSMTPSettings()
     {
         return view('admin/smtp-settings');
     }
+
+    /**
+     * Update SMTP Settings from  Admin Panel
+     *
+     * @return void
+     */
     public function updateSMTP()
     {
         $smtpHost = $this->request->getPost('smtp_host');
