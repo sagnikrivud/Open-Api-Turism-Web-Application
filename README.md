@@ -205,7 +205,7 @@ framework are exposed.
 | `api/make/payment`      | `amount, user_id, phone, trip_id` | POST |
 
 With Best regards,
- ### ![Sagnik Dey](https://github.com/sagnikrivud)
+ ### [Sagnik Dey](https://github.com/sagnikrivud)
 
  ---
 ## 💻 Tech Stack
