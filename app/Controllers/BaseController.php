@@ -55,4 +55,9 @@ abstract class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
     }
+
+    public function apiResponse($responseCode, $message, $boolean = null)
+    {
+        return $this->response->setJSON(['message' => $message, 'status' => $responseCode, 'condition' => $boolean]);
+    }
 }
