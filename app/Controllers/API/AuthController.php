@@ -91,7 +91,7 @@ class AuthController extends BaseController
      */
     public function validateOtp($userID, $otpCode, $purpose)
     {
-        $exist = Otp::where('user_id', $userID)->where('otp', $otpCode)->where('purpose', $purpose)->first();
+        $exist = Otp::where('user_id', $userID)->where('otp', $otpCode)->where('purpose', $purpose)->where('expired_at', '>', now())->first();
         if($exist != null){
             return true;
         }

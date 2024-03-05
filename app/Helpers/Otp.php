@@ -6,6 +6,10 @@ function generateOtpNumber($userId, $purpose='login')
 {
   $code = rand(100000, 999999);
   $otpModel = new Otp();
+  $exist =  $otpModel->where(['user_id' => $userId,'purpose'=>$purpose])->first();
+  if ($exist) {
+    $exist->delete();
+  }
   $data = [
     'otp'     => $code,
     'user_id' => $userId,
