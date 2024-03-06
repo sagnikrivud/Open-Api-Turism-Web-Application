@@ -152,7 +152,7 @@ $ php spark mm:up
 ```
 - Refer: https://github.com/arashsaffari/maintenancemode
 
-## Que Jobs
+## Queue Jobs
 > Setup Codeigniter Queue Job
 ```sh
 $ composer require codeigniter4/queue
