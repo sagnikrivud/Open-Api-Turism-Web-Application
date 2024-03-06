@@ -152,6 +152,39 @@ $ php spark mm:up
 ```
 - Refer: https://github.com/arashsaffari/maintenancemode
 
+## Que Jobs
+> Setup Codeigniter Queue Job
+```sh
+$ composer require codeigniter4/queue
+```
+```sh
+$ php spark migrate --all
+```
+```sh
+$ php spark queue:publish
+```
+```sh
+$ php spark queue:job ExampleJob
+```
+Add it to the `$jobHandlers` array in the `app\Config\Queue.php` file:
+```php
+use App\Jobs\Example;
+//....
+ 
+ 
+public array $jobHandlers = [
+    'my-example' => Example::class
+];
+```
+- Add job to the queue:
+```php
+service('queue')->push('queueName', 'my-example', ['data' => 'array']);
+```
+```sh
+$ php spark queue:work queueName
+```
+- Refer: https://github.com/codeigniter4/queue
+
 ## Check System Logs
 > Open http://your-domain/logs in browser
 - Refer: https://github.com/SeunMatt/codeigniter-log-viewer 
