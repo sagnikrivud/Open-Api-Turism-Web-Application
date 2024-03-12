@@ -23,6 +23,9 @@ __Application features__
 ## Payment Gateway
 ![Razorpay](https://cdn.iconscout.com/icon/free/png-512/free-razorpay-1649771-1399875.png?f=webp&w=256)
 
+## Git Install at server (Linux instance)
+```sh
+```
 ## Installation & updates (Directly at Server)
 ```sh
 $ git clone https://github.com/sagnikcapital/Open-Api-Travel-Application.git
