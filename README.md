@@ -26,6 +26,16 @@ __Application features__
 
 ## Git Install at server (Linux instance)
 ```sh
+$ sudo apt update
+```
+```sh
+$ sudo apt install git
+```
+```sh
+$ git config --global user.email "git_registered_email@example.com"
+```
+```sh
+$ git config --global user.name "Your git user Name"
 ```
 ## Installation & updates (Directly at Server)
 ```sh
