@@ -17,6 +17,7 @@ __Application features__
 - Razorpay Payment Gateway for husslefree payment processing.
 - Contents available for About Us, Announcements, Privacy Policy, Travel blogs, Contact us page etc.
 - No save card policy and secure payment guarantee.
+- SEO Friendly support from backend.
 # Grow your tourism
 ![Tourism](https://i.pinimg.com/736x/2f/a2/32/2fa2321cb1703d6eef32410774156fed.jpg)
 
